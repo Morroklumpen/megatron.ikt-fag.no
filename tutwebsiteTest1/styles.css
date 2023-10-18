@@ -1,0 +1,58 @@
+/* Reset some default styles for the body and headers */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: lightblue;
+}
+
+/* Style the fixed navigation bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+}
+.heading {
+text-align: center;
+background-color: gray;
+border-radius: 20px;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* Style sections and images */
+.content {
+    margin-top: 50px; /* Push content down to avoid overlap with the fixed navbar */
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Style section headings */
+h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
