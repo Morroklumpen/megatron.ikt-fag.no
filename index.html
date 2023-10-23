@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Tutorial</title>
+</head>
+<body>
+
+
+    <div class="navbar">
+        <ul>
+            <li><a href="#section1">Seksjon 1</a></li>
+            <li><a href="#section2">Seksjon 2</a></li>
+            <li><a href="#section3">Seksjon 3</a></li>
+
+        </ul>
+    </div>
+
+    <div class="banner">
+        <h1>Hvordan oprette en Vm, og hoste en Nettside på den med apache2</h1>
+        <img src="./IMG/3d-illustration-education-tablet-with-education-icons-on-on-hi-tech-background-education-banner-vector.jpg" alt="banner">
+    </div>
+
+    <div class="content">
+        <section id="section1">
+            <h2>Oprette en virituell machine "VM" i vcenter og laste ned og konfiguere ubuntu "operativsystem" på den:</h2>
+            <video controls id="video1">
+                <source src="./IMG/sette opp vm.webm" type="video/mp4">
+              </video>
+            <p>Først høyreklikker vi på elev poolen du har fått av læreren "din plass i serveren som kan gjøre hva du vil i" å trykker "ny VM"</p>
+            <p>Gi Vm en et navn, og gå igjennom konfigurasjonen som jeg gjør i videoen. Viktig at du velger Ubuntu 64bit som operativsystem. </p>
+            <p>Viktig at du også trykker "connect at power on" på Drive. Det er fordi at vaneligvis når man laster ned et operativsystem pleier man 
+                å ha en minne-pinne eller lignene som man plugger inn i pcen, men nå som vi gjør det inne i serveren må man "liksom" plugge den inn i 
+                serveren, så plugge den ut når ubuntu er ferdig lastet ned. 
+            </p>
+            <p>Når du konfiguerer Ethernet må du gå inn på ikt-fag.no eller ip: 10.12.99.69 å finne ditt "hacker alias" som er hvor du finner ut hvilke ip-adresser
+                som skal skrives inn. Det er noen ting som ikke står der så her er det: Adressen er ip-en til Vm-en, å den skal vere 10.12.din elevpool.hva du vil
+                Name servers skal vere 10.10.1.30 
+            </p>
+            <p>
+                Så må du velge navn og passord til sudo brukeren din. Husk å skrive ned passordet hvis du ikke husker så bra.
+            </p>
+        </section>
+
+        <section id="section2">
+            <h2>SSH e seg inn på serveren</h2>
+                <video controls id="video1">
+                  <source src="./IMG/hvordan bruke ssh inn i server.webm" type="video/mp4">
+                </video>
+            <p>Tab ut av den gamle terminalen å åpne en hvilkensomhelst anen terminal.</p>
+            <p>Så skriver du "ssh brukenavnet-til-sudo-brukeren @ ip-adressen til VMen, sånn som jeg gjør i videoen. </p>
+        </section>
+
+        <section id="section3">
+            <h2>Laste ned apache2 å konfiguere nettside</h2>
+            <video controls id="video1">
+                <source src="./IMG/hvordan bruke apache.webm" type="video/mp4">
+              </video>
+            <p>Først må du laste ned apache2 ved å skrive "sudo apt install apache2" inn i konsollen.</p>
+            <p>Så må du cd e deg til filen /var/www</p>
+            <p>Deretter gå til github å kopier http linken til nettsiden du skal lime inn.</p>
+            <p>Så må du skrive "sudo git clone https://selvelinken", hvis det ikke fungerer skriv "sudo apt install git" og prøv igjen. </p>
+            <p>Nå må du cd e til apache konfiguering filen: "/etc/apache2/sites-enabled". Når du har kommet dit skriv "sudo nano 000-default.conf". Det er bare en ting her inne
+                du trenger å endre på, å det er "DocumentRoot" hvor du da skal skrive inn filstien til der hvor nettsiden ligger, som er /var/www/nettsiden-din.
+            </p>
+            <h1>Hurra! da er nettsiden din i live, bare skriv inn ip-adressen til serveren inn i nettleseren.</h1>
+        </section>
+
+
+    </div>
+</body>
+<script src="./script.js"></script>
+</html>
